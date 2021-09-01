@@ -1,6 +1,8 @@
 # 2D-mirror
-Track user's head movements with tensorflow's BlazeFace model to control a series of layered images with p5js and WebGL
-[Live demo](https://nsitu.ca/2dmirror)
+Track user's head movements with tensorflow's BlazeFace model to control a series of layered images with p5js and WebGL  
+
+# Demo
+[Live demo](https://nsitu.ca/2dmirror)  
 
 # Background
 This sketch tracks the user's face via webcam. Head movements are used as a kind of UI / control. A BlazeFace model estimates facial landmarks in webcam video. This sketch uses tensorflow's "wasm" (web assembly) backend (WebGL and CPU are also possible). Facial orientation / proximity is calculated from eye and nose locations. Layered images react dynamically to users' head movements. 
