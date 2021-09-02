@@ -7,6 +7,7 @@
 
 // A BlazeFace model estimates facial landmarks in webcam video
 // See also: https://storage.googleapis.com/tfjs-models/demos/blazeface/index.html
+// BlazeFace Model Card: https://drive.google.com/file/d/1f39lSzU5Oq-j_OXgS67KfN5wNsoeAZ4V/view
 
 // Images in this iteration are based on a taxonomy by Giorgia Lupi
 // See also: https://www.accurat.it/work/ted
