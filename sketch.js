@@ -2,20 +2,20 @@
 
 // This sketch tracks the user's face via webcam
 // Head movements are used as a kind of UI / control
-// A BlazeFace model estimates facial landmarks in webcam video
 // Facial orientation / proximity is calculated from eye and nose locations
 // Layered images react dynamically to users' head movements
-// Images are selected for their connection to personal data
-// E.g. weather radar, fitness tracking, locations visited
+
+// A BlazeFace model estimates facial landmarks in webcam video
+// See also: https://storage.googleapis.com/tfjs-models/demos/blazeface/index.html
+
+// Images in this iteration are based on a taxonomy by Giorgia Lupi
+// See also: https://www.accurat.it/work/ted
 
 // Consider:
 // How and why does data visualization relate to artistic expression?
 // How and why might a data portrait differ from an infographic?
 // How and why is data presented and represented? 
-
-// See also:
-// https://storage.googleapis.com/tfjs-models/demos/blazeface/index.html
-
+// How might you adapt this sketch for your own data portrait?
 
 // Setup some variables for key elements.
 let model, webcam, canvas, fpsCounter
@@ -40,11 +40,16 @@ let faceCentre = {x:1,y:1}
 // Preload happens before anything else.
 preload = () => { 
   // images need to be preloaded so that p5 has access to them.
-  // feel free to use your own images here!
+  // the order is important as it affects the stacking of layers.
+  // this stack is inspired by https://www.accurat.it/work/ted
   images = [ 
-    loadImage("maps.png"),
-    loadImage("radar.png"),
-    loadImage("strava.png")
+    loadImage("rules.png"),
+    loadImage("workspace.png"),
+    loadImage("ted.png"),
+    loadImage("ideas.png"),
+    loadImage("read.png"),
+    loadImage("inbox.png"),
+    loadImage("future.png")
   ]
 }
 
@@ -162,6 +167,7 @@ getCentre = (face) => {
 drawImages = () =>{
   // To save us some math tell p5 to align images based on their centre point
   imageMode(CENTER)
+  fill(0,0,0,0);
   // loop through the array of images; see the preload() function above
   for (index in images){ 
     // a bit of fun to make some images more lively based on their location in the list
