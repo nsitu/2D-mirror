@@ -55,13 +55,22 @@ preload = () => {
 }
 
 setup = () => {
-  // Use a WebGL Canvas to make our images render faster
+
+if (window.frameElement){
+  document.getElementById('TabNotice').style.display = "block"
+}
+else{
+ // Use a WebGL Canvas to make our images render faster
   createCanvas(windowWidth, windowHeight, WEBGL)
   // Get a video feed from the webcam.
   webcam = createCapture(VIDEO, initialize)
   webcam.hide()
   // create a div to show frames per second
   fpsCounter = createDiv().id('fps').position(10, 10);
+}
+
+ 
+ 
 }
  
 draw = () => { 

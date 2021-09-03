@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body> 
-</body> 
+  <!-- This sketch works best in a new window.
+  Here we make a button to open a new tab in case the sketch is embedded. -->
+  <div id="TabNotice" style="display:none;">
+    <h2>2D Mirror</h2>
+    <p>For best experience, please 
+      <a onclick="window.open(window.location, '_blank')">open a new tab</a>
+    </p>
+    <p>
+      <a class="button" onclick="window.open(window.location, '_blank')">Launch</a>
+    </p>
+  </div>
+</body>
+<!-- The following line loads sketch.js, where most of the action is!  -->
 <script src="sketch.js"></script>
 </html>

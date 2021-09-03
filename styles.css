@@ -1,29 +1,48 @@
 html, body { 
-    height: 100%;  
-    margin: 0; 
+  height: 100%;  
+  margin: 0; 
+  font-family: sans-serif;
 }
 body { 
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    background: #efefee;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+#TabNotice{
+  width: 100%;
+} 
+p{
+  margin: 2rem auto;
+}
+a {
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a.button{
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: green;
+  text-decoration: none;
+  color: #ffffff;
 }
 canvas { 
-    display: block;    
+  display: block;    
 }
 #p5_loading{
-    display:none;
+  display:none;
 }
 
 #fps{
-    position: absolute;
-    top:0;
-    left:0;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #729a7c;
+  position: absolute;
+  top:0;
+  left:0;
+  font-size: 1rem;
+  color: #729a7c;
+  font-weight: bold;
 }
 #fps span{
-    font-size:0.8rem;
+  font-size:0.8rem;
 }
